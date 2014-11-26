@@ -16,8 +16,6 @@ jstack <pid>
 
 count to 10,000 using 10 threads
 java -classpath "/usr/local/opt/scala/libexec/lib/scala-library.jar:/usr/local/opt/scala/libexec/lib/scala-reflect.jar:target/jvm-memory-model-100.0.0-SNAPSHOT.jar" com.wix.Sync101
-javap target/classes/com/wix/Sync101\$IntCounter.class
-javap -c target/classes/com/wix/Sync101\$IntCounter.class
-
-
+javap target/classes/com/wix/Sync101\$IntAdder\$1\$\$anonfun\$run\$1.class
+javap -c target/classes/com/wix/Sync101\$IntAdder\$1\$\$anonfun\$run\$1.class
 

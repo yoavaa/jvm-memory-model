@@ -30,13 +30,14 @@ object Sync101 extends App {
 
   def doCountInt() {
     var countInt = 0
-
-    val threads: List[Thread] = List.fill(10)(new Thread(new Runnable() {
+    class IntAdder extends Runnable {
       def run() {
         for (i <- 1 to 1000)
           countInt = countInt + 1
       }
-    }))
+    }
+
+    val threads: List[Thread] = List.fill(10)(new Thread(new IntAdder))
 
     threads.foreach(_.start)
     threads.foreach(_.join)
