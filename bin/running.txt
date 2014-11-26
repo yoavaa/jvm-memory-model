@@ -1,1 +1,19 @@
-java -classpath "/usr/local/opt/scala/libexec/lib/scala-library.jar:/usr/local/opt/scala/libexec/lib/scala-reflect.jar:target/jvm-memory-model-100.0.0-SNAPSHOT.jar" com.wix.
+Jit:
+
+java -classpath "/usr/local/opt/scala/libexec/lib/scala-library.jar:/usr/local/opt/scala/libexec/lib/scala-reflect.jar:target/jvm-memory-model-100.0.0-SNAPSHOT.jar" com.wix.Jit
+
+java -XX:+PrintCompilation -classpath "/usr/local/opt/scala/libexec/lib/scala-library.jar:/usr/local/opt/scala/libexec/lib/scala-reflect.jar:target/jvm-memory-model-100.0.0-SNAPSHOT.jar" com.wix.Jit
+java -XX:+UnlockDiagnosticVMOptions -XX:+PrintInlining -classpath "/usr/local/opt/scala/libexec/lib/scala-library.jar:/usr/local/opt/scala/libexec/lib/scala-reflect.jar:target/jvm-memory-model-100.0.0-SNAPSHOT.jar" com.wix.Jit
+
+
+Instruction reordering:
+java -classpath "/usr/local/opt/scala/libexec/lib/scala-library.jar:/usr/local/opt/scala/libexec/lib/scala-reflect.jar:target/jvm-memory-model-100.0.0-SNAPSHOT.jar" com.wix.MemoryModelOrdering
+
+count in 100 mSec
+java -classpath "/usr/local/opt/scala/libexec/lib/scala-library.jar:/usr/local/opt/scala/libexec/lib/scala-reflect.jar:target/jvm-memory-model-100.0.0-SNAPSHOT.jar" com.wix.Visability
+java -classpath "/usr/local/opt/scala/libexec/lib/scala-library.jar:/usr/local/opt/scala/libexec/lib/scala-reflect.jar:target/jvm-memory-model-100.0.0-SNAPSHOT.jar" com.wix.VisabilityVolatile
+
+
+
+
+
