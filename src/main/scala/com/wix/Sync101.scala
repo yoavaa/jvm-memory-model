@@ -84,8 +84,12 @@ object Sync101 extends App {
       def run() {
         for (i <- 1 to 1000) {
           lock.lock()
-          countLock = countLock + 1
-          lock.unlock()
+          try {
+            countLock = countLock + 1
+          }
+          finally {
+            lock.unlock()
+          }
         }
       }
     }))
